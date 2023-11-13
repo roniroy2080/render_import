@@ -1,6 +1,16 @@
-const Server = require('http').createServer();
+const express = require('express');
+const app = express();
+const cors = require('cors');
+const Server = require('http').createServer(app);
 const io = require('socket.io')(Server,{
     cors: 'https://roniroy2080.github.io/render/',
+})
+app.use(cors());
+app.get('/verify',(req,res)=>{
+    res.json({
+        'name':'ronit kumar',
+        'class':"BCA"
+    })
 })
 
 const PORT = 6500
@@ -26,3 +36,5 @@ io.on('connection', socket => {
     })
 
 })
+
+console.log('update');
