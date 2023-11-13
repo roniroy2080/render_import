@@ -1,6 +1,6 @@
 const Server = require('http').createServer();
 const io = require('socket.io')(Server,{
-    cors: 'http://localhost',
+    cors: 'https://roniroy2080.github.io/render/',
 })
 
 const PORT = 6500
