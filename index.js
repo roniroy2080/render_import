@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const Server = require('http').createServer(app);
 const io = require('socket.io')(Server,{
-    cors: 'http://localhost',
+   cors: 'https://roniroy2080.github.io/render/',
 })
 app.use(cors());
 app.get('/verify',(req,res)=>{
